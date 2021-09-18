@@ -25,6 +25,31 @@ function showData(data) {
         </li>`).join("")}
     </ul>
     `
+
+    if (data.prev || data.next) {
+        more.innerHTML = `
+        ${
+            data.prev
+            ? `<button class="btn" onclick="getMoreSongs('${data.prev}')">Prev</button>`
+            : ''
+        }
+        ${
+            data.next
+            ? `<button class="btn" onclick="getMoreSongs('${data.next}')">Next</button>`
+            : ''
+        } 
+    `;
+    } else {
+    more.innerHTML = '';
+    }
+}
+
+// Get prev and next songs
+async function getMoreSongs(url) {
+    const res = await fetch(`https://cors-anywhere.herokuapp.com/${apiURL}/${url}`);
+    const data = await res.json();
+
+    showData(data);
 }
 
 // EventListners
