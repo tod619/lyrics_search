@@ -93,3 +93,17 @@ form button {
   right: 2px;
 }
 /* End: Header */
+
+/* Start: songs style */
+ul.songs {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.songs li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+/* End: songs Style */
