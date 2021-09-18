@@ -24,6 +24,16 @@ button:focus {
 
 /* End: General Style */
 
+/* Start: Generic components style */
+.btn {
+  background-color: #8d56fd;
+  border: 0;
+  border-radius: 10px;
+  color: #fff;
+  padding: 4px 10px;
+}
+/* End: Generic components style */
+
 /* Start: Header */
 header {
   background-image: url("https://images.unsplash.com/photo-1510915361894-db8b60106cb1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80");
