@@ -13,7 +13,19 @@ async function searchSongs(term) {
     showData(data)
 }
 
-function showData(data) {}
+// Show song and artist data in DOM
+function showData(data) {
+
+
+    result.innerHTML = `
+    <ul class = "songs">
+        ${data.data.map(song => `<li>
+        <span><strong>${song.artist.name}</strong> - ${song.title}</span>
+        <button class = "btn" data-artist = "${song.artist.name}"" data-title = "${song.title}">Get Lyrics</button>
+        </li>`).join("")}
+    </ul>
+    `
+}
 
 // EventListners
 form.addEventListener('submit', (e) => {
